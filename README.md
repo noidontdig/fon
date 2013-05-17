@@ -1,4 +1,4 @@
-fon-captive-portal
-==================
+fon
+===
 
-Sample Fon captive portal 
+Sample Fon captive portal page.
