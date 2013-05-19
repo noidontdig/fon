@@ -528,3 +528,146 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   background-image: url("debug/rhythm24.gif"); }
+
+a {
+  color: #3e79ee;
+  text-decoration: none;
+  font-weight: bold; }
+  a:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: #145ae5; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, Times, "Times New Roman", serif, serif;
+  font-weight: normal; }
+
+h1 {
+  margin-top: 0.9375em;
+  margin-bottom: 0.9375em;
+  font-size: 25.6px; }
+
+h2 {
+  margin-top: 1.15385em;
+  margin-bottom: 1.15385em;
+  font-size: 20.8px; }
+
+h3 {
+  margin-top: 1.25em;
+  margin-bottom: 0;
+  font-size: 19.2px;
+  color: #060607; }
+
+h4 {
+  margin-top: 1.36364em;
+  margin-bottom: 0;
+  font-size: 17.6px;
+  color: #060607; }
+
+h5 {
+  margin-top: 1.5em;
+  margin-bottom: 0;
+  font-size: 16px;
+  color: #060607; }
+
+h6 {
+  margin-top: 1.66667em;
+  margin-bottom: 0;
+  font-size: 14.4px;
+  color: #060607; }
+
+h3, h4, h5, h6 {
+  margin-bottom: 0; }
+  h3 + p, h4 + p, h5 + p, h6 + p {
+    margin-top: 0; }
+  h3 + ul, h4 + ul, h5 + ul, h6 + ul {
+    margin-top: 0; }
+
+ul, ol, dl {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em; }
+
+ul, dl {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  list-style: none; }
+
+ol {
+  padding-left: 1.5em;
+  padding-right: 1.5em; }
+
+p {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em; }
+
+dl {
+  font-style: normal; }
+
+dt {
+  font-weight: bold; }
+
+dd {
+  margin: 0 0 1.5em 0; }
+
+section > h1,
+section > h2,
+section > h3:first-child,
+section > h4:first-child,
+section > h5:first-child,
+section > h6:first-child,
+section > p,
+section > ul {
+  margin-top: 0; }
+
+section > li {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: none;
+  clear: both;
+  display: table;
+  font-size: 14px;
+  line-height: 1.71429em; }
+  table th, table td {
+    vertical-align: top;
+    padding: 0 0.375em; }
+    table th:first-child, table td:first-child {
+      padding-left: 0; }
+    table th:last-child, table td:last-child {
+      padding-right: 0; }
+  table dl {
+    margin-top: 1.71429em;
+    margin-bottom: 1.71429em; }
+  table thead {
+    padding: 0;
+    margin: 0;
+    color: #8c92ac;
+    text-align: left; }
+
+.header, .content, .footer {
+  /* by default */
+  width: 57.5em;
+  margin: 0 auto;
+  clear: both; }
+  @media only screen and (max-width: 60em) {
+    .header, .content, .footer {
+      width: 37.5em; } }
+  @media only screen and (max-width: 40em) {
+    .header, .content, .footer {
+      width: auto;
+      max-width: 28.125em;
+      padding: 0 1.5em; } }
+
+.content {
+  margin-bottom: 4.5em;
+  clear: both;
+  min-height: 31.5em; }
+
+.banner {
+  height: auto;
+  width: 100%;
+  margin-top: -3em; }

@@ -1,0 +1,122 @@
+// Component defaults
+
+body {
+  font-family: $helvetica, sans-serif;
+  font-size: $base-font-size;
+  line-height: rhythm();
+  color: $cs-black;
+
+  -webkit-font-feature-settings: "kern", "liga", "case";
+  -moz-font-feature-settings: "kern=1", "liga=1", "case=1";
+  -moz-font-feature-settings: "kern", "liga", "case";
+  font-feature-settings: "kern", "liga", "case";
+
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  @include debug-rhythm;
+}
+
+a {
+  color: $cs-blue;
+  text-decoration: none;
+  font-weight: bold;
+  &:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: darken($cs-blue, 10%);
+  }
+}
+
+h1, h2, h3, h4, h5, h6 { 
+  font-family: $georgia, serif;
+  font-weight: normal; }
+h1 { @include v-margin(rhythm(1, $h1-font-size));  font-size: $h1-font-size; }
+h2 { @include v-margin(rhythm(1, $h2-font-size));  font-size: $h2-font-size; }
+h3 { @include v-margin(rhythm(1, $h3-font-size), 0);  font-size: $h3-font-size; color: darken($cs-black, 10%); }
+h4 { @include v-margin(rhythm(1, $h4-font-size), 0);  font-size: $h4-font-size; color: darken($cs-black, 10%); }
+h5 { @include v-margin(rhythm(1, $h5-font-size), 0);  font-size: $h5-font-size; color: darken($cs-black, 10%); }
+h6 { @include v-margin(rhythm(1, $h6-font-size), 0);  font-size: $h6-font-size; color: darken($cs-black, 10%); }
+h3, h4, h5, h6 {
+  margin-bottom: 0;
+  + p {  margin-top: 0; }
+  + ul { margin-top: 0; }
+}
+
+ul, ol, dl { 
+  @include v-margin(rhythm()); 
+}
+ul, dl { 
+  @include h-margin(0);
+  @include h-padding(0);
+  list-style: none; 
+}
+ol {
+  @include h-padding(rhythm());  
+}
+
+
+p {
+  @include v-margin(rhythm());
+}
+
+dl {
+  font-style: normal;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0 0 rhythm() 0;
+}
+
+section > h1,
+section > h2,
+section > h3:first-child,
+section > h4:first-child,
+section > h5:first-child,
+section > h6:first-child,
+section > p,
+section > ul {
+  margin-top: 0;
+}
+
+section > li {
+  @include v-margin(rhythm()); 
+}
+
+
+table {
+  border-collapse: collapse;
+  border-spacing: none;
+  clear: both;
+  display: table;
+
+  $table-font-size: 14px;
+  font-size: $table-font-size;
+  line-height: rhythm(1, $table-font-size);
+
+  th, td {
+    vertical-align: top;
+    padding: 0 rhythm() / 4;
+    &:first-child { padding-left: 0; }
+    &:last-child  { padding-right: 0; }
+  }
+
+  dl {
+    @include v-margin( rhythm(1, $table-font-size) );
+  }
+
+  thead {
+    padding: 0;
+    margin: 0;
+    color: $cs-manatee;
+    text-align: left;
+  }
+}

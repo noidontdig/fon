@@ -9,23 +9,21 @@ $full-width  : 920px;
 $tablet-width: 600px;
 $mobile-width: 450px;
 
-body {
-  font-family: $helvetica, sans-serif;
-  font-size: $base-font-size;
-  line-height: rhythm();
-  color: $cs-black;
+.header, .content, .footer {
+  /* by default */                        width: remify($full-width); margin: 0 auto;
+  @include tablet-landscape-and-below() { width: remify($tablet-width); }
+  @include tablet-portrait-and-below() { width: auto; max-width: remify($mobile-width); padding: 0 rhythm();}
+  clear: both;
+}
 
-  -webkit-font-feature-settings: "kern", "liga", "case";
-  -moz-font-feature-settings: "kern=1", "liga=1", "case=1";
-  -moz-font-feature-settings: "kern", "liga", "case";
-  font-feature-settings: "kern", "liga", "case";
+.content {
+  margin-bottom: rhythm(3);
+  clear: both;
+  min-height: rhythm(21);
+}
 
-  -webkit-overflow-scrolling: touch;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-
-  @include debug-rhythm;
+.banner {
+  height: auto;
+  width: 100%;
+  margin-top: rhythm(-2);
 }
