@@ -1,0 +1,10 @@
+// Base styling
+@import "Base";
+
+// Breakpoints at:
+// @tablet-landscape-and-below  for tablet
+// @tablet-portrait-and-below   for mobile
+
+$full-width  : 920px;
+$tablet-width: 600px;
+$mobile-width: 450px;

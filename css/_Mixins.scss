@@ -1,0 +1,24 @@
+// MIXINS
+
+@mixin prefixed($key, $val) {
+  -webkit-#{$key}: $val;
+  -moz-#{$key}: $val;
+  -ms-#{$key}: $val;
+  -o-#{$key}: $val;
+  #{$key}: $val;
+}
+
+@mixin v-margin($top, $bottom: $top) {
+  margin-top: $top;
+  margin-bottom: $bottom;
+}
+
+@mixin h-margin($left, $right: $left) {
+  margin-left: $left;
+  margin-right: $right;
+}
+
+@mixin h-padding($left, $right: $left) {
+  padding-left: $left;
+  padding-right: $right;
+}

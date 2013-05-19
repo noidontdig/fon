@@ -1,0 +1,38 @@
+// RHTYHM
+
+
+@function pixelize($ems, $font-size: $base-font-size)  {
+  @return $ems / 1em * ($font-size / 1px) * 1px;
+}
+
+@function remify($pixels, $font-size: $base-font-size)  {
+  @return $font-unit * $pixels / $font-size;
+}
+
+@function rhythm($lines: 1, $font-size: $base-font-size) {
+  @return $font-unit * $lines * $base-line-height / $font-size;
+}
+
+// If the debug flag is set, set background image 
+// to our vertical rhythm gif
+@mixin debug-rhythm($height: $base-line-height) {
+  @if $debug {
+    background-image: url('debug/rhythm#{$height / 1px}.gif'); 
+  }
+}
+
+@mixin v-margin($top, $bottom: $top) {
+  margin-top: $top;
+  margin-bottom: $bottom; }
+
+@mixin h-margin($left, $right: $left) {
+  margin-left: $left;
+  margin-right: $right; }
+
+@mixin v-padding($top, $bottom: $top) {
+  padding-top: $top;
+  padding-bottom: $bottom; }
+
+@mixin h-padding($left, $right: $left) {
+  padding-left: $left;
+  padding-right: $right; }
