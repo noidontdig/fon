@@ -24,13 +24,13 @@ body {
   @include tablet-landscape-and-below() {
     background-size: auto 100%;
   }
-}
+} 
 
 .content, .container {
   margin-top: rhythm(3);
   margin-bottom: rhythm(3);
   clear: both;
-  min-height: rhythm(21);
+  min-height: rhythm(25);
   color: $cs-white;
 }
 
@@ -39,13 +39,22 @@ body {
   background: #000;
   opacity: 0.8;
   padding: rhythm(); 
+
+  @include tablet-landscape-and-below() {
+    min-height: rhythm(32);
+  }
 }
 
 .content {
   opacity: 1;
   z-index: 1;
-  margin-top: rhythm(-24);  
+  margin-top: rhythm(-28);  
   position: relative;
+  text-align: center;
+
+  @include tablet-landscape-and-below() {
+    margin-top: rhythm(-35);
+  }
 }
 
 .brand {
@@ -53,10 +62,7 @@ body {
   img {
     height: rhythm(8);
     width: auto;
-  }
-  a {
-    font-size: $h1-font-size;
-    color: $cs-white;
+    padding-bottom: 0;
   }
 }
 
@@ -66,7 +72,42 @@ body {
   background: rgb(72,52,191);
   width: 250px;
   padding: rhythm() / 2;
-  
+  font-size: $h1-font-size;
+  color: $cs-white;
+  &:hover {
+    background: #4834aa;
+  }
+}
+
+.deals {
+  // padding-top: rhythm();
+  margin-left: auto;
+  margin-right: auto;
+  width: 900px;
+  text-align: center;
+  li {
+    float: left;
+    width: 250px;
+    padding: 0 rhythm();
+  }
+
+  @include tablet-landscape-and-below() {
+    width: 450px;
+    li {
+      float: none;
+      width: 400px;
+    }
+  }
+
+  @include tablet-portrait-and-below() {
+    width: auto;
+    max-width: 450px;
+    li {
+      width: auto;
+      max-width: 450px;
+    }
+  }
+
 }
 
 .footer {

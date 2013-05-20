@@ -526,7 +526,8 @@ body {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility; }
+  text-rendering: optimizeLegibility;
+  background-image: url("debug/rhythm24.gif"); }
 
 a {
   color: #fcfcfc;
@@ -669,7 +670,7 @@ body {
   margin-top: 4.5em;
   margin-bottom: 4.5em;
   clear: both;
-  min-height: 31.5em;
+  min-height: 37.5em;
   color: #fcfcfc; }
 
 .container {
@@ -677,28 +678,60 @@ body {
   background: #000;
   opacity: 0.8;
   padding: 1.5em; }
+  @media only screen and (max-width: 60em) {
+    .container {
+      min-height: 48em; } }
 
 .content {
   opacity: 1;
   z-index: 1;
-  margin-top: -36em;
-  position: relative; }
+  margin-top: -42em;
+  position: relative;
+  text-align: center; }
+  @media only screen and (max-width: 60em) {
+    .content {
+      margin-top: -52.5em; } }
 
 .brand {
   text-align: center; }
   .brand img {
     height: 12em;
-    width: auto; }
-  .brand a {
-    font-size: 25.6px;
-    color: #fcfcfc; }
+    width: auto;
+    padding-bottom: 0; }
 
 .fb-button {
   margin-left: auto;
   margin-right: auto;
   background: #4834bf;
   width: 250px;
-  padding: 0.75em; }
+  padding: 0.75em;
+  font-size: 25.6px;
+  color: #fcfcfc; }
+  .fb-button:hover {
+    background: #4834aa; }
+
+.deals {
+  margin-left: auto;
+  margin-right: auto;
+  width: 900px;
+  text-align: center; }
+  .deals li {
+    float: left;
+    width: 250px;
+    padding: 0 1.5em; }
+  @media only screen and (max-width: 60em) {
+    .deals {
+      width: 450px; }
+      .deals li {
+        float: none;
+        width: 400px; } }
+  @media only screen and (max-width: 40em) {
+    .deals {
+      width: auto;
+      max-width: 450px; }
+      .deals li {
+        width: auto;
+        max-width: 450px; } }
 
 .footer {
   width: 200px;
