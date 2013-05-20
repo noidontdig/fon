@@ -517,7 +517,7 @@ body {
   font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif, sans-serif;
   font-size: 16px;
   line-height: 1.5em;
-  color: #fcfcfc;
+  color: #1f1f21;
   -webkit-font-feature-settings: "kern", "liga", "case";
   -moz-font-feature-settings: "kern=1", "liga=1", "case=1";
   -moz-font-feature-settings: "kern", "liga", "case";
@@ -529,7 +529,7 @@ body {
   text-rendering: optimizeLegibility; }
 
 a {
-  color: #3e79ee;
+  color: #fcfcfc;
   text-decoration: none;
   font-weight: bold; }
   a:hover {
@@ -537,7 +537,6 @@ a {
     text-decoration: none;
     color: #145ae5; }
 
-h1, h2, h3, h4, h5, h6
 h1 {
   margin-top: 0.9375em;
   margin-bottom: 0.9375em;
@@ -644,16 +643,16 @@ table {
     color: #8c92ac;
     text-align: left; }
 
-.container, .content, .footer {
+.container, .content {
   /* by default */
   width: 57.5em;
   margin: 0 auto;
   clear: both; }
   @media only screen and (max-width: 60em) {
-    .container, .content, .footer {
+    .container, .content {
       width: 37.5em; } }
   @media only screen and (max-width: 40em) {
-    .container, .content, .footer {
+    .container, .content {
       width: auto;
       max-width: 28.125em;
       padding: 0 1.5em; } }
@@ -670,7 +669,8 @@ body {
   margin-top: 4.5em;
   margin-bottom: 4.5em;
   clear: both;
-  min-height: 31.5em; }
+  min-height: 31.5em;
+  color: #fcfcfc; }
 
 .container {
   z-index: 0;
@@ -700,19 +700,12 @@ body {
   width: 250px;
   padding: 0.75em; }
 
-.header img {
-  height: 4.5em;
-  width: auto; }
-.header .fon-logo {
-  float: right; }
-
-.banner {
-  height: 24em;
-  overflow: hidden; }
-  .banner img {
-    margin-top: -200px;
-    height: auto;
-    width: 115%;
-    z-index: 0; }
-  .banner .inner {
-    margin-top: -60em; }
+.footer {
+  width: 200px;
+  float: right;
+  position: relative;
+  bottom: 0;
+  right: 0; }
+  .footer img {
+    height: 3em;
+    width: auto; }

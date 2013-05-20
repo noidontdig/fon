@@ -4,7 +4,7 @@ body {
   font-family: $helvetica, sans-serif;
   font-size: $base-font-size;
   line-height: rhythm();
-  color: $cs-white;
+  color: $cs-black;
 
   -webkit-font-feature-settings: "kern", "liga", "case";
   -moz-font-feature-settings: "kern=1", "liga=1", "case=1";
@@ -22,7 +22,7 @@ body {
 }
 
 a {
-  color: $cs-blue;
+  color: $cs-white;
   text-decoration: none;
   font-weight: bold;
   &:hover {
@@ -32,10 +32,6 @@ a {
   }
 }
 
-h1, h2, h3, h4, h5, h6 
-// { 
-//   font-family: $georgia, serif;
-//  font-weight: normal; }
 h1 { @include v-margin(rhythm(1, $h1-font-size));  font-size: $h1-font-size; }
 h2 { @include v-margin(rhythm(1, $h2-font-size));  font-size: $h2-font-size; }
 h3 { @include v-margin(rhythm(1, $h3-font-size), 0);  font-size: $h3-font-size; color: darken($cs-black, 10%); }

@@ -9,7 +9,7 @@ $full-width  : 920px;
 $tablet-width: 600px;
 $mobile-width: 450px;
 
-.container, .content, .footer {
+.container, .content{
   /* by default */                        width: remify($full-width); margin: 0 auto;
   @include tablet-landscape-and-below() { width: remify($tablet-width); }
   @include tablet-portrait-and-below() { width: auto; max-width: remify($mobile-width); padding: 0 rhythm();}
@@ -31,6 +31,7 @@ body {
   margin-bottom: rhythm(3);
   clear: both;
   min-height: rhythm(21);
+  color: $cs-white;
 }
 
 .container {
@@ -68,33 +69,14 @@ body {
   
 }
 
-.header {
-  // padding-top: rhythm();
+.footer {
+  width: 200px;
+  float: right;
+  position: relative;
+  bottom: 0;
+  right: 0;
   img {
-    height: rhythm(3);
+    height: rhythm(2);
     width: auto;
-    // padding: rhythm() / 4;
-  }
-  .fon-logo {
-    float: right;
-  }
-  .brand-logo {
-    // padding-left: rhythm();
-  }
-}
-
-.banner {
-  height: rhythm(16);
-  overflow: hidden;
-
-  img {
-    margin-top: -200px;
-    height: auto;
-    width: 115%;
-    z-index: 0;
-  }
-
-  .inner {
-    margin-top: rhythm(-40);
   }
 }
