@@ -526,8 +526,7 @@ body {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  background-image: url("debug/rhythm24.gif"); }
+  text-rendering: optimizeLegibility; }
 
 a {
   color: #3e79ee;
@@ -648,16 +647,16 @@ table {
     color: #8c92ac;
     text-align: left; }
 
-.header, .content, .footer {
+.content, .footer {
   /* by default */
   width: 57.5em;
   margin: 0 auto;
   clear: both; }
   @media only screen and (max-width: 60em) {
-    .header, .content, .footer {
+    .content, .footer {
       width: 37.5em; } }
   @media only screen and (max-width: 40em) {
-    .header, .content, .footer {
+    .content, .footer {
       width: auto;
       max-width: 28.125em;
       padding: 0 1.5em; } }
@@ -665,9 +664,23 @@ table {
 .content {
   margin-bottom: 4.5em;
   clear: both;
-  min-height: 31.5em; }
+  min-height: 31.5em;
+  z-index: 1; }
+
+.header img {
+  height: 4.5em;
+  width: auto;
+  padding: 0.375em; }
+.header .fon-logo {
+  float: right; }
 
 .banner {
-  height: auto;
-  width: 100%;
-  margin-top: -3em; }
+  height: 450px;
+  overflow: hidden; }
+  .banner img {
+    margin-top: -200px;
+    height: auto;
+    width: 115%;
+    z-index: 0; }
+  .banner .inner {
+    margin-top: -60em; }
