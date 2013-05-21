@@ -44,11 +44,6 @@ body {
   @include tablet-landscape-and-below() {
     min-height: rhythm($tablet-height);
   }
-
-  @include tablet-portrait-and-below() {
-    padding-left: 0;
-    padding-right: 0; 
-  }
 }
 
 .content {
