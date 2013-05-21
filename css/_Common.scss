@@ -4,7 +4,7 @@ body {
   font-family: $helvetica, sans-serif;
   font-size: $base-font-size;
   line-height: rhythm();
-  color: $cs-black;
+  color: $fon-black;
 
   -webkit-font-feature-settings: "kern", "liga", "case";
   -moz-font-feature-settings: "kern=1", "liga=1", "case=1";
@@ -22,22 +22,22 @@ body {
 }
 
 a {
-  color: $cs-white;
+  color: $fon-white;
   text-decoration: none;
   font-weight: bold;
   &:hover {
     cursor: pointer;
     text-decoration: none;
-    color: darken($cs-blue, 10%);
+    color: $fon-white;
   }
 }
 
 h1 { @include v-margin(rhythm(1, $h1-font-size));  font-size: $h1-font-size; }
 h2 { @include v-margin(rhythm(1, $h2-font-size));  font-size: $h2-font-size; }
-h3 { @include v-margin(rhythm(1, $h3-font-size), 0);  font-size: $h3-font-size; color: darken($cs-black, 10%); }
-h4 { @include v-margin(rhythm(1, $h4-font-size), 0);  font-size: $h4-font-size; color: darken($cs-black, 10%); }
-h5 { @include v-margin(rhythm(1, $h5-font-size), 0);  font-size: $h5-font-size; color: darken($cs-black, 10%); }
-h6 { @include v-margin(rhythm(1, $h6-font-size), 0);  font-size: $h6-font-size; color: darken($cs-black, 10%); }
+h3 { @include v-margin(rhythm(1, $h3-font-size), 0);  font-size: $h3-font-size; color: darken($fon-black, 10%); }
+h4 { @include v-margin(rhythm(1, $h4-font-size), 0);  font-size: $h4-font-size; color: darken($fon-black, 10%); }
+h5 { @include v-margin(rhythm(1, $h5-font-size), 0);  font-size: $h5-font-size; color: darken($fon-black, 10%); }
+h6 { @include v-margin(rhythm(1, $h6-font-size), 0);  font-size: $h6-font-size; color: darken($fon-black, 10%); }
 h3, h4, h5, h6 {
   margin-bottom: 0;
   + p {  margin-top: 0; }
@@ -113,7 +113,6 @@ table {
   thead {
     padding: 0;
     margin: 0;
-    color: $cs-manatee;
     text-align: left;
   }
 }
