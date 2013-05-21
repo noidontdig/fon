@@ -5,9 +5,11 @@
 // @tablet-landscape-and-below  for tablet
 // @tablet-portrait-and-below   for mobile
 
-$full-width  : 920px;
-$tablet-width: 600px;
-$mobile-width: 450px;
+$full-width   : 920px;
+$tablet-width : 600px;
+$mobile-width : 450px;
+$full-height  : 28;
+$tablet-height: 49;
 
 .container, .content{
   /* by default */                        width: remify($full-width); margin: 0 auto;
@@ -21,15 +23,15 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 
-  @include tablet-landscape-and-below() {
+  /* @include tablet-landscape-and-below() {
     background-size: auto 100%;
-  } 
+  } */
 } 
 
 .content, .container {
-  margin-top: rhythm(3);
+  margin-top: rhythm(2);
   clear: both;
-  min-height: rhythm(29);
+  min-height: rhythm($full-height);
   color: $fon-white;
 }
 
@@ -40,27 +42,27 @@ body {
   padding: rhythm(); 
 
   @include tablet-landscape-and-below() {
-    min-height: rhythm(49);
+    min-height: rhythm($tablet-height);
   }
 }
 
 .content {
   opacity: 1;
   z-index: 1;
-  margin-top: rhythm(-29);  
+  margin-top: - rhythm($full-height);  
   position: relative;
   text-align: center;
-  margin-bottom: rhythm(2);
+  margin-bottom: 0;
   
   @include tablet-landscape-and-below() {
-    margin-top: rhythm(-49);
+    margin-top: - rhythm($tablet-height);
   }
   .brand {
     text-align: center;
     img {
       height: rhythm(8);
       width: auto;
-      margin-top: rhythm(-1) / 4;
+      margin-top: rhythm(-5) / 4;
     }
     margin-bottom: rhythm(3) / 2;
     .fb-button {
